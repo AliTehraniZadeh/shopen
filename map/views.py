@@ -4,6 +4,7 @@ from .models import Search
 from .forms import SearchForm
 from django.http import HttpResponse
 
+
 def index(request):
     if request.method == "POST":
         form = SearchForm(request.POST)
@@ -31,3 +32,4 @@ def index(request):
         'form' : form
     }
     return render(request, 'index.html', context)
+#test git
